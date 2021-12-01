@@ -1,0 +1,17 @@
+win+shift+h = rotate screen left
+win+shift+l = lock keyboard/touchpad
+win+shift+j = restore rotation
+win+shift+d = enter docked mode
+win+enter = open alacritty
+win+q = close
+win+space = open rofi
+win+f = open pcmanfm
+win+shift+s = open htop (in alacritty)
+win+shift+u = system update (in alacritty)
+win+shift+enter = open alacritty as root
+win+shift+r = restart i3
+win+shift+e = exit i3
+win+0 = shutdown mode
+mod+d = open discord
+mod+b = open brave
+mod+s = take screenshot (with flameshot)
