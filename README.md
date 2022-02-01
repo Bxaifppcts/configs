@@ -1,7 +1,8 @@
 # Features (WIP)
-
+![Desktop Screenshot](https://i.imgur.com/G2TfUwY.png)
 ## Terminal (alacritty)
 - Fish shell
+  - automatically shows off your neofetch (how cool!)
 - pacman aliases
   - pu = sudo pacman -Syu
   - ps = sudo pacman -S
