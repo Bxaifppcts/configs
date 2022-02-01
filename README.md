@@ -1,8 +1,14 @@
 # Before you install
 
-## You need an installed Arch Linux OS with yay, git and a non-root user.  Consider using my modified ArchTitus installer at https://github.com/Rusted-Nuts/ArchTitus
+## You need an installed Arch Linux OS with yay, git and a non-root user.  Consider using the  ArchTitus server installer at https://github.com/ChrisTitusTech/ArchTitus.
 
-git clone will download the server branch by default as this is the recommended setup program to use
+clone it with:
+
+```
+git clone --branch server https://github.com/ChrisTitusTech/ArchTitus
+```
+
+git clone will download the server branch as this is the recommended setup program to use
 
 # Features (WIP)
 ![Desktop Screenshot](https://i.imgur.com/G2TfUwY.png)
