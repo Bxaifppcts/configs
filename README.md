@@ -41,7 +41,7 @@
 # Installation
 give install.sh execute permissions with chmod +x install.sh
 
-run ./install.sh
+run ./install.sh (NOT as root, it needs access to your user's home folder)
 
 The installation script will install all required packages with the yay AUR helper (install this if you don't already have it)
 
