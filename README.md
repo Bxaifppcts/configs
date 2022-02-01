@@ -1,14 +1,8 @@
 # Before you install
 
-## You need an installed Arch Linux OS with yay, git and a non-root user.  Consider using the  ArchTitus server installer at https://github.com/ChrisTitusTech/ArchTitus.
+## You need an installed Arch Linux OS with yay, git and a non-root user.  Calam-Arch does a decent enough job with installing it.
 
-clone it with:
-
-```
-git clone --branch server https://github.com/ChrisTitusTech/ArchTitus
-```
-
-git clone will download the server branch as this is the recommended setup program to use
+https://sourceforge.net/projects/blue-arch-installer/
 
 # Features (WIP)
 ![Desktop Screenshot](https://i.imgur.com/G2TfUwY.png)
