@@ -1,6 +1,6 @@
 # Before you install
 
-## You need an installed Arch Linux OS with yay, git and a non-root user.
+## You need an installed Arch Linux OS with yay, git and a non-root user.  Consider using my modified ArchTitus installer at https://github.com/Rusted-Nuts/ArchTitus
 
 # Features (WIP)
 ![Desktop Screenshot](https://i.imgur.com/G2TfUwY.png)
