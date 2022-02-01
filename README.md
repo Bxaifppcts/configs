@@ -9,3 +9,5 @@ software required: i3-gaps, i3blocks, alacritty, brave, discord, flameshot, pcma
 
 # About .scripts
 this folder contains scripts that are used with i3, mostly for tablet PC usage
+
+at the moment, every file except keyslist is designed to be used with my tablet PC (Acer Spin 3), but they can be edited for your hardware
