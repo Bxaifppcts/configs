@@ -1,5 +1,6 @@
 # Installation
 give install.sh execute permissions with chmod +x install.sh
+
 run ./install.sh
 
 # About
