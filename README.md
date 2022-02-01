@@ -1,3 +1,7 @@
+# Before you install
+
+## You need an installed Arch Linux OS with yay, git and a non-root user.
+
 # Features (WIP)
 ![Desktop Screenshot](https://i.imgur.com/G2TfUwY.png)
 ## Terminal (alacritty)
