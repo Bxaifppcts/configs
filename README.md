@@ -4,7 +4,7 @@
 
 https://sourceforge.net/projects/blue-arch-installer/
 
-You __could__ technically convert an existing installation to Nuts OS if you so choose, but it's easier to start fresh.
+You *could* technically convert an existing installation to Nuts OS if you so choose, but it's easier to start fresh.
 
 # Features (WIP)
 ![Desktop Screenshot](https://i.imgur.com/G2TfUwY.png)
