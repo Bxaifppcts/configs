@@ -2,6 +2,8 @@
 
 ## You need an installed Arch Linux OS with yay, git and a non-root user.  Consider using my modified ArchTitus installer at https://github.com/Rusted-Nuts/ArchTitus
 
+git clone will download the server branch by default as this is the recommended setup program to use
+
 # Features (WIP)
 ![Desktop Screenshot](https://i.imgur.com/G2TfUwY.png)
 ## Terminal (alacritty)
