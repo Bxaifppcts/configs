@@ -13,7 +13,7 @@ You *could* technically convert an existing installation to Nuts OS if you so ch
   - automatically shows off your neofetch (how cool!)
 - pacman aliases
   - pu = sudo pacman -Syu
-  - ps = sudo pacman -S
+  - ps = sudo pacman -S (may interfere with the already existing ps command, modify or remove this if you have to)
   - pq = sudo pacman -Qq
   - pr = sudo pacman -Rns
 
