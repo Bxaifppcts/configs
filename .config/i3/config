@@ -51,6 +51,7 @@ bindsym $mod+q kill
 
 # start program launcher
 bindsym $mod+space exec --no-startup-id rofi -show run
+bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 #take screenshot
 bindsym $mod+s exec flameshot gui
@@ -81,7 +82,6 @@ bindsym $mod+F exec pcmanfm
 bindsym $mod+Shift+c exec alacritty -e vim ~/.config/i3/config
 bindsym $mod+c exec alacritty -e less ~/.scripts/keyslist
 bindsym $mod+Shift+s exec alacritty -e htop 
-bindsym $mod+d exec discord
 bindsym $mod+Shift+u exec alacritty -e sudo pacman -Syu 
 bindsym $mod+Shift+Return exec notify-send "Root Terminal" && alacritty -e sudo bash 
 
@@ -126,11 +126,11 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+grave move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+bindsym $mod+grave scratchpad show
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
@@ -148,6 +148,10 @@ set $ws5 5
 set $ws6 6
 set $ws7 7
 set $ws8 8
+set $ws9 9
+set $ws10 10
+set $ws11 11
+set $ws12 12
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -158,6 +162,10 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym $mod+minus workspace $ws11
+bindsym $mod+equal workspace $ws12
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -226,7 +234,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 
 # Set shut down, restart and locking features
-bindsym $mod+0 mode "$mode_system"
+bindsym $mod+Escape mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
@@ -254,11 +262,14 @@ mode "$mode_browser" {
     bindsym Escape mode "default"
 }
 
-#  Lock screen
-bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id onboard
+
+exec --no-startup-id discord
+for_window [class="discord"] move scratchpad
+
+
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 0.2; picom -b
 #exec --no-startup-id manjaro-hello
