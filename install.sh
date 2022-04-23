@@ -4,11 +4,13 @@
 
 mkdir ~/.config
 mkdir ~/.scripts
+mkdir ~/.local
 
 #copies the config files to your home folder
 
 cp -r .config/* ~/.config
 cp -r .scripts/* ~/.scripts
+cp -r .local/* ~/.local
 cp .gtkrc-2.0 ~
 cp .bashrc ~
 cp .alacritty.yml ~
