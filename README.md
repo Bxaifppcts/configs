@@ -6,7 +6,7 @@ https://sourceforge.net/projects/blue-arch-installer/
 
 You *could* technically convert an existing installation to Nuts OS if you so choose, but it's easier to start fresh.
 
-Uncomment Line 24 in install.sh if you want to install the required programs.  Keep it commented if you only want to copy the configuration files.
+The installation script will ask you if you want to install yay along with extra programs.  If you choose to install them, it will ask you again after it's finished.  Answering no on the second time will allow the script to continue as usual. 
 
 # Features (WIP)
 ![Desktop Screenshot](https://i.imgur.com/G2TfUwY.png)
