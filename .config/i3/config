@@ -79,6 +79,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec notify-send "Welcome" "To edit your i3 configuration in vim, press mod+shift+c, to view keybinds, press mod+c"
 # Start Applications
 bindsym $mod+F exec pcmanfm 
+bindsym $mod+D exec discord 
 bindsym $mod+Shift+c exec alacritty -e vim ~/.config/i3/config
 bindsym $mod+c exec alacritty -e less ~/.scripts/keyslist
 bindsym $mod+Shift+s exec alacritty -e htop 
@@ -275,7 +276,6 @@ mode "$mode_browser" {
 exec --no-startup-id onboard
 
 exec --no-startup-id discord
-for_window [class="discord"] move scratchpad
 
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

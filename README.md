@@ -1,10 +1,12 @@
 # Before you install
 
-## You need an installed Arch Linux OS with yay, git and a non-root user.  Calam-Arch does a decent enough job with installing it.
+## You need an installed Arch Linux OS with git and a non-root user.  Calam-Arch does a decent enough job with installing it. The installation script will install yay if you don't have it. 
 
 https://sourceforge.net/projects/blue-arch-installer/
 
 You *could* technically convert an existing installation to Nuts OS if you so choose, but it's easier to start fresh.
+
+Uncomment Line 24 in install.sh if you want to install the required programs.  Keep it commented if you only want to copy the configuration files.
 
 # Features (WIP)
 ![Desktop Screenshot](https://i.imgur.com/G2TfUwY.png)

@@ -1,7 +1,17 @@
 #!/bin/bash
 
+#give other scripts execute permissions
+
+chmod +x installprograms.sh
+chmod +x installyay.sh
+#checks if you have pacman installed
+
+command -v pacman >/dev/null 2>&1 || { echo >&2 "'pacman' could not be detected, this installation script is not compatible with your system."; exit 1;  }
+command -v yay >/dev/null 2>&1 || { ~/configs/installyay.sh; }
+
 #creates a config folder if you dont have one already
 
+cd ~/configs
 mkdir ~/.config
 mkdir ~/.scripts
 mkdir ~/.local
@@ -16,18 +26,12 @@ cp .bashrc ~
 cp .alacritty.yml ~
 
 #install required programs with yay
-
-#yay -Syu dunst easystroke fish i3-gaps i3blocks picom-jonaburg vimix-gtk-themes alacritty rofi pcmanfm htop discord brave-bin flameshot vim neofetch starship volumeicon onboard networkmanager nm-connection-editor nm-applet xfce4-power-manager lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxsession lxappearance blueman-applet noto-fonts-emoji nitrogen xorg-server pulseaudio pulseaudio-alsa pulseaudio-bluetooth
-
-#enable lightdm
-
-sudo systemctl enable lightdm
-
-#Create a backgrounds folder if you dont have one already
-
-sudo mkdir /usr/share/backgrounds
-sudo cp backgrounds/* /usr/share/backgrounds
-
-#copy lightdm files (requires root)
-
-
+while true; do
+    read -p "Yay is installed.  Do you want to install extra programs? (y/n)" yn
+            case $yn in
+                        [Yy]* )  ~/configs/installprograms.sh;;
+                                [Nn]* ) echo "Skipping..." ; exit;;
+                                        * ) echo "Please answer yes or no.";;
+                                            esac
+                                        done
+exit
