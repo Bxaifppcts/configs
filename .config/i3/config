@@ -5,7 +5,8 @@
 set $mod Mod4
 
 #autostart inportant apps
-
+exec --no-startup-id xrandr --output DP-4 --rate 143.98 --mode 1920x1080
+exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --right-of DP-4
 #enable bluetooth
 exec --no-startup-id blueman-applet
 #start lxde polkit
