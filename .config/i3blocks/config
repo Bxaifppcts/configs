@@ -1,42 +1,26 @@
 [WEATHER]
 command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
 interval=300
-color=#FEC925
+color=#FFFFFF
 
 [DISK]
 command=df -h / | awk '/\//{ printf(" 💾 %4s/%s \n", $4, $2) }'
 interval=2
-color=#C9E3DB
+color=#FFFFFF
 
 [BATTERY]
 command=~/.config/i3blocks/battery/battery_info.sh
 interval=3
 
-[CPU]
-full_text= CPU:  0.00% @ +00.0°C 
-command=~/.config/i3blocks/cpu/cpu_info.sh
-interval=2
-color=#00B4EB
-
 [MEM]
 command=free -h | awk '/Mem:/ { printf(" 🐏 %5s/%s \n", $3, $2) }'
 interval=1
-color=#FEC925
+color=#FFFFFF
 
 [SOUND_BURST]
 command=~/.config/i3blocks/sound/sound_burst.sh
 interval=once
 
-[SOUND]
-full_text= 🔇:  0% 
-command=~/.config/i3blocks/sound/sound_info.sh
-interval=1
-signal=1
-
 [TIME_DATE]
 command=date +" %a, %d %b - %H:%M:%S"
-interval=1
-
-[CAPS]
-command=~/.scripts/caps.sh
 interval=1
