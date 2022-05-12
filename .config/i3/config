@@ -1,6 +1,9 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+#set primary monitor
+exec --no-startup-id xrandr --output DP-4 --primary
+exec --no-startup-id xrandr --output DP-4 --rate 143.98 --mode 1920x1080 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
