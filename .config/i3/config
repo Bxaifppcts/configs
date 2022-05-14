@@ -339,7 +339,7 @@ tray_output primary
 
 	bindsym button4 nop
 	bindsym button5 nop
-   font xft:URWGothic-Book 11
+   font xft:URWGothic-Book 13
 	strip_workspace_numbers yes
 
     colors {
