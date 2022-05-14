@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 gtk-theme-name="vimix-dark-amethyst"
-gtk-icon-theme-name="Adwaita"
+gtk-icon-theme-name="Numix"
 gtk-font-name="Cantarell 13"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
