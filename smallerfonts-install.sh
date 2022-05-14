@@ -11,7 +11,7 @@ cd .config/i3
 sed -i "s/URWGothic-Book 13/URWGothic-Book 11/g" config >> config
 
 # change DP-4 to eDP
-sed -i "%s/DP-4/eDP/g" config >> config
+sed -i "s/DP-4/eDP/g" config >> config
 
 # run the main installer
 sh install.sh
