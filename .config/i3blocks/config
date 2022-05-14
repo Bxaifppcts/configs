@@ -3,9 +3,19 @@ command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
 interval=300
 color=#FFFFFF
 
+[CPU]
+command=grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage "% CPU"}' 
+interval=2
+color=#FFFFFF
+
 [DISK]
 command=df -h / | awk '/\//{ printf(" 💾 %4s/%s \n", $4, $2) }'
 interval=2
+color=#FFFFFF
+
+[PACKAGE]
+command=pacman -Q | wc -l | awk '{package=($1)} END {print package " Pkg"}'
+interval=3
 color=#FFFFFF
 
 [BATTERY]
