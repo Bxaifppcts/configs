@@ -9,8 +9,9 @@ sed -i "s/Cantarell 13/Cantarell 10/g" .gtkrc-2.0 >> .gtkrc-2.0
 # change i3 size from 11 to 8
 cd .config/i3
 sed -i "s/URWGothic-Book 13/URWGothic-Book 11/g" config >> config
-cd ..
-cd ..
+
+# change DP-4 to eDP
+sed -i "%s/DP-4/eDP/g" config >> config
 
 # run the main installer
 sh install.sh
