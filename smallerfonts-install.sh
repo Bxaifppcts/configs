@@ -8,7 +8,7 @@ sed -i "s/Cantarell 13/Cantarell 10/g" .gtkrc-2.0 >> .gtkrc-2.0
 
 # change i3 size from 11 to 8
 cd .config/i3
-sed -i "s/URWGothic-Book 11/URWGothic-Book 8/g" config >> config
+sed -i "s/URWGothic-Book 13/URWGothic-Book 8/g" config >> config
 cd ..
 cd ..
 
