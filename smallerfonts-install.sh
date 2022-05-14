@@ -1,10 +1,10 @@
 #!/bin/sh
 
-# change alacritty font from 13 to 11
-sed -i "s/size: 13/size: 11/g" .alacritty.yml >> .alacritty.yml
+# change alacritty font from 11 to 9
+sed -i "s/size: 11/size: 9/g" .alacritty.yml >> .alacritty.yml
 
 # change GTK font from 13 to 10
-sed -i "s/Cantarell 13/Cantarell 11/g" .gtkrc-2.0 >> .gtkrc-2.0
+sed -i "s/Cantarell 13/Cantarell 10/g" .gtkrc-2.0 >> .gtkrc-2.0
 
 # change i3 size from 11 to 8
 cd .config/i3
