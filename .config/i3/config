@@ -1,9 +1,11 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# set faster keyboard rate
+exec --no-startup-id xset r rate 150 100
 #set primary monitor
-exec --no-startup-id xrandr --output DP-4 --primary
-exec --no-startup-id xrandr --output DP-4 --rate 143.98 --mode 1920x1080 
+exec --no-startup-id xrandr --output eDP --primary
+exec --no-startup-id xrandr --output eDP --rate 143.98 --mode 1920x1080 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
@@ -81,7 +83,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Welcome message
 exec notify-send "Welcome" "To edit your i3 configuration in vim, press mod+shift+c, to view keybinds, press mod+c"
 # Start Applications
-bindsym $mod+F exec pcmanfm 
+bindsym $mod+F exec alacritty -e vifm 
 bindsym $mod+D exec discord 
 bindsym $mod+Shift+c exec alacritty -e vim ~/.config/i3/config
 bindsym $mod+c exec alacritty -e less ~/.scripts/keyslist
@@ -202,7 +204,7 @@ bindsym $mod+Shift+equal move container to workspace $ws12; workspace $ws12
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
 # assign [class="Pale moon"] $ws2
-# assign [class="Pcmanfm"] $ws3
+# assign [class="alacritty -e vifm"] $ws3
 # assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
@@ -339,7 +341,7 @@ tray_output primary
 
 	bindsym button4 nop
 	bindsym button5 nop
-   font xft:URWGothic-Book 13
+   font xft:URWGothic-Book 11
 	strip_workspace_numbers yes
 
     colors {
