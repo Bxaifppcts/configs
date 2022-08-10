@@ -24,6 +24,12 @@ exec --no-startup-id flameshot
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
+# disable other monitors
+bindsym $mod+Shift+W exec --no-startup-id xrandr --output DVI-I-1 --off; exec --no-startup-id xrandr --output HDMI-0 --off; exec --no-startup-id xrandr --output DP-4 --rate 143.98 --mode 1920x1080; exec sleep 1 && nitrogen --restore; exec picom -b
+
+# enable other monitors
+bindsym $mod+W exec --no-startup-id xrandr --output DVI-I-1 --mode 1920x1080 --right-of DP-4; exec --no-startup-id xrandr --output HDMI-0 --mode 1600x900 --left-of DP-4; exec sleep 1.5 && nitrogen --restore; exec picom -b
+
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border none
 default_floating_border none
@@ -84,7 +90,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Welcome message
 exec notify-send "Welcome" "To edit your i3 configuration in vim, press mod+shift+c, to view keybinds, press mod+c"
 # Start Applications
-bindsym $mod+F exec alacritty -e vifm 
+bindsym $mod+F exec pcmanfm 
 bindsym $mod+D exec discord 
 bindsym $mod+Shift+c exec alacritty -e vim ~/.config/i3/config
 bindsym $mod+c exec alacritty -e less ~/.scripts/keyslist
@@ -205,7 +211,7 @@ bindsym $mod+Shift+equal move container to workspace $ws12; workspace $ws12
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
 # assign [class="Pale moon"] $ws2
-# assign [class="alacritty -e vifm"] $ws3
+# assign [class="pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
