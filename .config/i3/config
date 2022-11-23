@@ -349,7 +349,7 @@ tray_output primary
 	strip_workspace_numbers yes
 
     colors {
-        background #22222200
+        background #222222
         statusline #F9FAF9
         separator  #454947
 
