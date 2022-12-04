@@ -1,12 +1,9 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# set faster keyboard rate
-exec --no-startup-id xset r rate 150 100
 #set primary monitor
-exec --no-startup-id xrandr --output DP-0 --primary
-exec --no-startup-id xrandr --output DP-0 --rate 143.98 --mode 1920x1080 --right-of HDMI-0
-exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 --right-of DP-4
+exec --no-startup-id xrandr --output eDP --primary
+exec --no-startup-id xrandr --output eDP --rate 143.98 --mode 1920x1080 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
@@ -23,12 +20,6 @@ exec --no-startup-id flameshot
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
-
-# disable other monitors
-bindsym $mod+Shift+W exec --no-startup-id xrandr --output DVI-I-1 --off; exec --no-startup-id xrandr --output HDMI-0 --off; exec --no-startup-id xrandr --output DP-4 --rate 143.98 --mode 1920x1080; exec sleep 1 && nitrogen --restore; exec picom -b
-
-# enable other monitors
-bindsym $mod+W exec --no-startup-id xrandr --output DVI-I-1 --mode 1920x1080 --right-of DP-4; exec --no-startup-id xrandr --output HDMI-0 --mode 1600x900 --left-of DP-4; exec sleep 1.5 && nitrogen --restore; exec picom -b
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border none
@@ -211,7 +202,7 @@ bindsym $mod+Shift+equal move container to workspace $ws12; workspace $ws12
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
 # assign [class="Pale moon"] $ws2
-# assign [class="pcmanfm"] $ws3
+# assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
@@ -287,6 +278,8 @@ mode "$mode_browser" {
 # Autostart applications
 exec --no-startup-id onboard
 
+
+
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 0.2; picom -b
 #exec --no-startup-id manjaro-hello
@@ -334,7 +327,7 @@ set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	i3bar_command i3bar --transparency
+	i3bar_command i3bar 
 	status_command i3blocks
 	position top
 
@@ -349,7 +342,7 @@ tray_output primary
 	strip_workspace_numbers yes
 
     colors {
-        background #222222
+        background #333333
         statusline #F9FAF9
         separator  #454947
 
